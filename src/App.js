@@ -14,6 +14,7 @@ import Footer from "./components/Footer/Footer";
 
 // Util Imports
 import PrivateRoute from "./utils/PrivateRoute";
+import BooksSearchPage from "./pages/BooksSearchpage/BooksSearchPage";
 
 function App() {
   return (
@@ -33,6 +34,14 @@ function App() {
           element={
             <PrivateRoute>
               <BooksDetailsPage />
+            </PrivateRoute>
+          }
+        />
+          <Route
+          path="/booksearch"
+          element={
+            <PrivateRoute>
+              <BooksSearchPage />
             </PrivateRoute>
           }
         />
