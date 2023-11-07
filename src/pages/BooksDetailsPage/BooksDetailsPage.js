@@ -1,34 +1,34 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Data } from "../../localData";
+import { useLocation } from "react-router-dom";
+import BookMapper from "../../components/BookIfo/BookInfo";
 
 const BooksDetailsPage = () => {
-  const [users, setUsers] = useState(Data);
+  const [users, setUsers] = useState([]);
+  const { state } = useLocation();
+  console.log("state inside of recipe page : ", state);
   useEffect(() => {
-    // fetchUsers();
+    fetchUsers();
   }, []);
 
   const fetchUsers = async () => {
     try {
       let response = await axios.get(
-        "https://www.googleapis.com/books/v1/volumes/s1gVAAAAYAAJ"
+        `https://www.googleapis.com/books/v1/volumes?q=${state}`
       );
-      setUsers(response.data);
-      console.log(response.data);
+      setUsers(response.data.items);
+     
     } catch (error) {
       console.log(error.message);
     }
   };
+  console.log(users);
 
   return (
     <div>
-      <li>{users.volumeInfo.title}</li>
-      <li>
-        <img src={users.volumeInfo.imageLinks.small}></img>
-      </li>
-
-      <br></br>
-      <li>{users.volumeInfo.description}</li>
+      test
+     <BookMapper users={users} />
     </div>
   );
 };

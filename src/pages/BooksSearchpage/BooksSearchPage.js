@@ -27,27 +27,17 @@ const BooksSearchPage = () => {
         console.log(error.message);
       }
     };
+   
     
     
-      
-  async function getBooks(entry) {
-    let userinput = entry;
-    let fiilteredBooks= users.filter(function (users) {
-      if (users.volumeInfo.title.includes(userinput)) {
-        return true;
-      }
-      
-    });
-
-    setBooks(fiilteredBooks);
-    console.log(books);
-  }
+   
    
   
     return (
       <div>
         test 
-    <SearchBar onSubmit ={getBooks} />
+    <SearchBar />
+   
     
        
         
