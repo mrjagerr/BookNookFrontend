@@ -13,20 +13,8 @@ const BooksSearchPage = () => {
     const [users, setUsers] = useState(Data);
     const [books,setBooks] = useState([]);
     
-    useEffect(() => {
-    fetchUsers();
-    }, []);
-  
-    const fetchUsers = async () => {
-      try {
-        let response = await axios.get(
-          `https://www.googleapis.com/books/v1/volumes?q=quilting`
-        );
-        setUsers(response.data);
-      } catch (error) {
-        console.log(error.message);
-      }
-    };
+   
+    
    
     
     
@@ -35,7 +23,7 @@ const BooksSearchPage = () => {
   
     return (
       <div>
-        test 
+        
     <SearchBar />
    
     

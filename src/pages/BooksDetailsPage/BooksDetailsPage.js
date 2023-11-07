@@ -27,8 +27,8 @@ const BooksDetailsPage = () => {
 
   return (
     <div>
-      test
-     <BookMapper users={users} />
+      Search result
+     <BookMapper users={users}  />
     </div>
   );
 };

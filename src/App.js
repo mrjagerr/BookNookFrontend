@@ -7,14 +7,17 @@ import HomePage from "./pages/HomePage/HomePage";
 import LoginPage from "./pages/LoginPage/LoginPage";
 import RegisterPage from "./pages/RegisterPage/RegisterPage";
 import BooksDetailsPage from "./pages/BooksDetailsPage/BooksDetailsPage";
+import BooksSearchPage from "./pages/BooksSearchpage/BooksSearchPage";
+import BooksInfoPage  from "./pages/BooksInfoPage/BooksInfoPage"
 
 // Component Imports
 import Navbar from "./components/NavBar/NavBar";
 import Footer from "./components/Footer/Footer";
+import SearchBar from "./components/SearchBar/SearchBar.jsx";
 
 // Util Imports
 import PrivateRoute from "./utils/PrivateRoute";
-import BooksSearchPage from "./pages/BooksSearchpage/BooksSearchPage";
+
 
 function App() {
   return (
@@ -34,6 +37,14 @@ function App() {
           element={
             <PrivateRoute>
               <BooksDetailsPage />
+            </PrivateRoute>
+          }
+        />
+          <Route
+          path="/booksinfo"
+          element={
+            <PrivateRoute>
+              <BooksInfoPage />
             </PrivateRoute>
           }
         />
