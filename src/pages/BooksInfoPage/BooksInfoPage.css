@@ -1,0 +1,31 @@
+.container{
+    display: flexbox;
+}
+.card {
+    /* Card position */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    background-color: rgb(175, 175, 179);
+    display: flex;
+   flex-direction: column;
+   align-items: center;
+   height: fit-content;
+   width:60vh;
+   margin-top: 10vh;
+   margin-left: 10vh;
+   border: 5px solid;
+
+}
+.thumbnail{
+    border-color: black;
+    border: 6px solid;
+   justify-content: center;
+   display: flex;
+}
+tbody{
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
