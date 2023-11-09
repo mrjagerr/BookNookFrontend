@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Data } from "../../localData";
 import { useLocation } from "react-router-dom";
-import BookMapper from "../../components/BookIfo/BookInfo";
+import BookMapper from "../../components/BookInfo/BookInfo";
 
 const BooksDetailsPage = () => {
   const [users, setUsers] = useState([]);
