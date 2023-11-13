@@ -16,6 +16,11 @@ const Navbar = () => {
             <b>BookNook</b>
             
           </Link>
+          <br></br>
+          <Link to="/favorites" style={{ textDecoration: "none", color: "white" }}>
+            <b>Favorites</b>
+            
+          </Link>
           <SearchBar/>
         </li>
         

@@ -7,7 +7,7 @@ import BookMapper from "../../components/BookInfo/BookInfo";
 const BooksDetailsPage = () => {
   const [users, setUsers] = useState([]);
   const { state } = useLocation();
-  console.log("state inside of recipe page : ", state);
+  console.log("state inside of bookdetails page : ", state);
   useEffect(() => {
     fetchUsers();
   }, []);

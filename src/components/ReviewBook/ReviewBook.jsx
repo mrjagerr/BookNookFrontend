@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import useAuth from "../../hooks/useAuth";
 import axios from "axios";
 import { Location, useLocation } from "react-router-dom";
+import FavoriteButton from "../FavoriteButton/FavoriteButton";
 
 
 
@@ -50,11 +51,11 @@ return(
     <div >
        {reviewWithUser.averageRating}
       
-       
+       <FavoriteButton  ReviewState={reviewWithUser} />
        {reviews && reviews.map(review =>{
         return <li key = {review.id}> {review.user.userName}
          {review.text}
-       
+         
 
         </li>
        })}

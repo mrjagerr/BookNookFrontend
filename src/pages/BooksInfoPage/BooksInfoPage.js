@@ -5,6 +5,7 @@ import axios from "axios";
 import "./BooksInfoPage.css";
 import * as DOMPurify from "dompurify";
 import ReviewBook from "../../components/ReviewBook/ReviewBook";
+import FavoriteButton from "../../components/FavoriteButton/FavoriteButton";
 
 const BooksInfoPage = () => {
   const [book, setBook] = useState([]);
@@ -37,8 +38,7 @@ const BooksInfoPage = () => {
       <div className="thumbnail">
         <img src={img.thumbnail}   ></img>
       </div>
-      <button> Favorite </button>
-    
+     
         <div className="cardContent">
           <li className=" cardinfo1"> Title : {book.title}</li>
           <li className="cardinfo1"> Authors : {book.authors}</li>

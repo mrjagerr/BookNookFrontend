@@ -8,7 +8,8 @@ import LoginPage from "./pages/LoginPage/LoginPage";
 import RegisterPage from "./pages/RegisterPage/RegisterPage";
 import BooksDetailsPage from "./pages/BooksDetailsPage/BooksDetailsPage";
 import BooksSearchPage from "./pages/BooksSearchpage/BooksSearchPage";
-import BooksInfoPage  from "./pages/BooksInfoPage/BooksInfoPage"
+import BooksInfoPage  from "./pages/BooksInfoPage/BooksInfoPage";
+import FavoritesPage from "./pages/FavoritesPage/FavoritesPage.js";
 
 // Component Imports
 import Navbar from "./components/NavBar/NavBar";
@@ -53,6 +54,14 @@ function App() {
           element={
             <PrivateRoute>
               <BooksSearchPage />
+            </PrivateRoute>
+          }
+        />
+         <Route
+          path="/favorites"
+          element={
+            <PrivateRoute>
+              <FavoritesPage />
             </PrivateRoute>
           }
         />
