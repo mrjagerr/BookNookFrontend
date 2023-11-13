@@ -8,7 +8,8 @@ import useAuth from "../../hooks/useAuth";
 
 const FavoritesPage = () => {
 const [user, token] = useAuth();
-const [cars, setFavorites] = useState([]);
+const [favorites, setFavorites] = useState([]);
+
 
 useEffect(() => {
   fetchCars();
@@ -22,7 +23,9 @@ const fetchCars = async () => {
       },
     });
     setFavorites(response.data);
+    
     console.log(response.data)
+  
   } catch (error) {
     console.log(error.response.data);
   }
@@ -32,7 +35,17 @@ const fetchCars = async () => {
 
     return ( 
         <div>
-            Favorites
+           {favorites &&
+        favorites.map((favorites) => {
+          return (
+            <li key={favorites.bookid}>
+            
+              {favorites.title}
+             <div> <img src={favorites.thumbnailUrl}></img></div>
+              
+            </li>
+          );
+        })}
         </div>
      );
 }
