@@ -4,6 +4,7 @@ import { useLocation } from "react-router-dom";
 import axios from "axios";
 import "./BooksInfoPage.css";
 import * as DOMPurify from "dompurify";
+import ReviewBook from "../../components/ReviewBook/ReviewBook";
 
 const BooksInfoPage = () => {
   const [book, setBook] = useState([]);
@@ -32,23 +33,25 @@ const BooksInfoPage = () => {
   return (
     <div>
       <div className="card">
-      {console.log(state)}
-      {console.log(book)}
-      {console.log(img)}
+      
       <div className="thumbnail">
-        <img src={img.thumbnail} width={300} height={300}  ></img>
+        <img src={img.thumbnail}   ></img>
       </div>
       <button> Favorite </button>
-      <table>
-        <tbody>
-          <tr> Title : {book.title}</tr>
-          <tr> Authors : {book.authors}</tr>
-          <tr> Destription</tr>
-          <td>{clean}</td>
-        </tbody>
-      </table>
-      </div>
+    
+        <div className="cardContent">
+          <li className=" cardinfo1"> Title : {book.title}</li>
+          <li className="cardinfo1"> Authors : {book.authors}</li>
+          <li className="cardinfo1"> Destription</li>
+          <li className="cardinfo2">{clean}</li>
+          </div>
+          
      
+     
+      </div>
+      
+     
+      <ReviewBook reviewBookId = {state}/>
      
      
     </div>

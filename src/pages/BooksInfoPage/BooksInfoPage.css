@@ -24,10 +24,11 @@
    justify-content: center;
    display: flex;
    image-resolution:300dpi; 
+   margin-top: 7vh;
    
   
 }
-tbody{
+.cardContent{
     justify-content: center;
     display: flex;
     flex-direction: column;
@@ -41,7 +42,7 @@ button {
     background-color: rgb(0, 0, 0);
     margin-top: 2vh;
     margin-bottom: 2vh;
-    
+
   }
   
   button:hover {
@@ -59,6 +60,19 @@ button {
     
   
   }
-  td{
+  .cardinfo1{
     text-decoration: underline;
+    margin: 1vh;
+    list-style-type: none 
   }
+  .cardinfo2{
+    text-decoration: underline;
+    margin: 5vh;
+    list-style-type: none 
+  }
+  
+  img{
+    height: 40vh;
+    width: 40vh;
+    image-resolution:300dpi;
+ }
