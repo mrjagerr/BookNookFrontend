@@ -13,6 +13,7 @@ const [favorites, setFavorites] = useState([]);
 
 useEffect(() => {
   fetchCars();
+ 
 }, [token]);
 
 const fetchCars = async () => {
@@ -22,7 +23,10 @@ const fetchCars = async () => {
         Authorization: "Bearer " + token,
       },
     });
-    setFavorites(response.data);
+ setFavorites(response.data);
+
+
+  
     
     console.log(response.data)
   
@@ -35,10 +39,11 @@ const fetchCars = async () => {
 
     return ( 
         <div>
+          
            {favorites &&
-        favorites.map((favorites) => {
+        favorites.map((favorites,index) => {
           return (
-            <li key={favorites.bookid}>
+            <li key={index}>
             
               {favorites.title}
              <div> <img src={favorites.thumbnailUrl}></img></div>
