@@ -53,10 +53,11 @@ button {
     border: 3px solid;
     display: flex;
     flex-direction: column;
-    width: 70vh;
+    width: fit-content;
+    min-width: 60vh;
     position: relative;
-    left: 90vh;
-    bottom: 100vh;
+    left: 65%;
+    bottom: 55vh;
 
     
   
@@ -84,8 +85,9 @@ button {
   max-width: fit-content;
   padding-inline: 5vh;
   position: relative;
-  left: 100vh;
-  bottom: 90vh;
+  left:65%;
+  bottom:50vh;
+ 
   padding-top: 1vh;
   background: steelblue;
   text-transform: capitalize;
@@ -95,9 +97,9 @@ font-size: xx-large;
   
  }
  .favButton{
-  display: flex;
-  position: relative;
-  left: 10vh;
-  top: 10vh
+  
+  position: absolute;
+  left: 5vh;
+  top: 23vh
  }
  

@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import useAuth from "../../hooks/useAuth";
 import ReviewBook from "../../components/ReviewBook/ReviewBook";
 import axios from "axios";
+import SearchBar from "../../components/SearchBar/SearchBar";
 
 const HomePage = () => {
   // The "user" value from this Hook contains user information (id, userName, email) from the decoded token
@@ -31,15 +32,11 @@ const HomePage = () => {
     <div className="container">
       {console.log(user)}
       <h1>Home Page for {user.userName}!</h1>
-      {cars &&
-        cars.map((car) => (
-          <p key={car.id}>
-            {car.year} {car.model} {car.make}
-          </p>
-        ))}
-        
+      <div className="search">
+        <SearchBar />
+      </div>
+      Search Page
     </div>
-    
   );
 };
 

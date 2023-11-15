@@ -2,7 +2,6 @@ ul {
   display: flex;
   justify-content: space-between;
   list-style-type: none;
-  position: relative;
 }
 
 li {
@@ -33,4 +32,9 @@ li {
 .brand {
   cursor: pointer;
   font-size: 2rem;
+}
+.favorites{
+  font-size: large;
+  
+  
 }

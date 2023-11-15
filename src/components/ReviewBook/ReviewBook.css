@@ -1,11 +1,24 @@
-.reviewBoxRow{
+.reviewBoxRow1{
     border: 2px solid;
     display: flex;
     flex-direction: column;
     padding: 1;
+   
+
+  }
+.reviewBoxRow2{
+    background-color: steelblue;
+    border: 2px solid;
+    text-transform: capitalize;
+ 
+   
+   
+
   }
 .ratingBox{
     font-size: xx-large;
     border: 2px solid;
     background: steelblue;
+    
+    
 }

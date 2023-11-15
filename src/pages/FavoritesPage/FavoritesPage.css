@@ -1,0 +1,23 @@
+img{
+    height: 20vh;
+    width: 20vh;
+    image-resolution:300dpi;
+ }
+ li{
+    list-style: none;
+ }
+ .cardFav{
+    border: 5px solid;
+    width:60vh;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+padding-inline: 5vh;
+margin-top: 5vh;
+margin-left: 5vh;
+
+background-color: steelblue;
+ }
+ h1{
+    margin-left: 10vh;
+ }

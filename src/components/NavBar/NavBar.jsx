@@ -17,11 +17,11 @@ const Navbar = () => {
             
           </Link>
           <br></br>
-          <Link to="/favorites" style={{ textDecoration: "none", color: "white" }}>
-            <b>Favorites</b>
-            
+          <Link to="/favorites" style={{ textDecoration: "none", color: "white" }} className="favorites">
+             <b>Favorites</b>
+              
           </Link>
-          <SearchBar/>
+       
         </li>
         
         <li>
@@ -31,8 +31,12 @@ const Navbar = () => {
             <button onClick={() => navigate("/login")}>Login</button>
           )}
         </li>
-        
+       
       </ul>
+      <div className="search">
+         <SearchBar/>
+      </div>
+     
     </div>
   );
 };
