@@ -6,7 +6,7 @@
     /* Card position */
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
-    background-color: rgb(175, 175, 179);
+    background: steelblue;
     display: flex;
    flex-direction: column;
    align-items: center;
@@ -50,13 +50,14 @@ button {
     color: rgb(0, 0, 0);
   }
   .reviewbox{
-    border: 5px solid;
+    border: 3px solid;
     display: flex;
     flex-direction: column;
     width: 70vh;
     position: relative;
-    left: 100vh;
-    bottom: 60vh;
+    left: 90vh;
+    bottom: 100vh;
+
     
   
   }
@@ -76,3 +77,27 @@ button {
     width: 40vh;
     image-resolution:300dpi;
  }
+ .postReviewBox{
+  border: 3px solid;
+  display: flex;
+  flex-direction: column;
+  max-width: fit-content;
+  padding-inline: 5vh;
+  position: relative;
+  left: 100vh;
+  bottom: 90vh;
+  padding-top: 1vh;
+  background: steelblue;
+  text-transform: capitalize;
+  text-align: center;
+font-weight: bolder;
+font-size: xx-large;
+  
+ }
+ .favButton{
+  display: flex;
+  position: relative;
+  left: 10vh;
+  top: 10vh
+ }
+ 

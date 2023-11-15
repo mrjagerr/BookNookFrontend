@@ -4,6 +4,7 @@ import useAuth from "../../hooks/useAuth";
 import axios from "axios";
 import { Location, useLocation } from "react-router-dom";
 import FavoriteButton from "../FavoriteButton/FavoriteButton";
+import './ReviewBook.css'
 
 const ReviewBook = () => {
   const [user, token] = useAuth();
@@ -39,7 +40,7 @@ const ReviewBook = () => {
 
   return (
     <div>
-      <div>
+      <div className="ratingBox" >
         <label>Rating:</label>{reviewWithUser.averageRating}
       </div>
 
@@ -47,7 +48,7 @@ const ReviewBook = () => {
       {reviews &&
         reviews.map((review) => {
           return (
-            <li key={review.id}>
+            <li key={review.id} className="reviewBoxRow">
               {" "}
               {review.user.userName}  : 
               {review.text}

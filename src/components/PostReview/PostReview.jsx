@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Location, useLocation } from "react-router-dom";
 import axios from "axios";
 import useAuth from "../../hooks/useAuth";
+import './PostReview.css'
 
 const PostReview = () => {
   const { state } = useLocation();
@@ -43,14 +44,17 @@ const PostReview = () => {
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <label> Review</label>
-        <input
-          type="text"
+        <label> Review :</label>
+        <textarea
+        className="reviewText"
+          type="textarea"
           value={text}
           onChange={(event) => setText(event.target.value)}
           id="text"
-        ></input>
-        <label>Rating(1-5)</label>
+          rows="4" cols="50"
+
+        ></textarea>
+        <label>Rating : (1-5)</label>
         <input
           type="number"
           min="1"
@@ -58,8 +62,9 @@ const PostReview = () => {
           value={rating}
           onChange={(event) => setRating(event.target.value)}
           id="rating"
+          className="rating"
         ></input>
-        <button type="submit">Post</button>
+        <button type="submit" className="buttonDetails">Post</button>
       </form>
     </div>
   );

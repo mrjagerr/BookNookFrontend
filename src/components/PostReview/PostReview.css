@@ -1,0 +1,16 @@
+.reviewText{
+   position: relative;
+   align-items: end;
+   flex-direction: row;
+   display: flex;
+   padding: 1vh;
+   font-size: large;
+   
+}
+.buttonDetails{
+    margin-left: 2vh;
+    width: 10vh;
+}
+.rating{
+    font-size:large;
+}

@@ -1,0 +1,9 @@
+.favoritebutton{
+    transition-duration: 0.4s;
+    color: #ffffff;
+    border-color: black;
+    background-color: rgb(0, 0, 0);
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+
+}

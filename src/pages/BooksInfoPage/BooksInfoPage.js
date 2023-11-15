@@ -13,7 +13,7 @@ const BooksInfoPage = () => {
   const [img, setImg] = useState([]);
   const { state } = useLocation();
   const clean = DOMPurify.sanitize(book.description, {
-    FORBID_TAGS: ["p", "br", "b", "a","i"],
+    FORBID_TAGS: ["p", "br", "b", "a", "i"],
   });
   console.log("state inside of recipe page : ", state);
   useEffect(() => {
@@ -34,27 +34,29 @@ const BooksInfoPage = () => {
 
   return (
     <div>
-      <div className="card">
-      
-      <div className="thumbnail">
-        <img src={img.thumbnail}   ></img>
+      <div className="favButton">
+        <FavoriteButton bookDetails={book} />
       </div>
-     
+      <div className="card">
+        <div className="thumbnail">
+          <img src={img.thumbnail}></img>
+        </div>
+
         <div className="cardContent">
           <li className=" cardinfo1"> Title : {book.title}</li>
           <li className="cardinfo1"> Authors : {book.authors}</li>
           <li className="cardinfo1"> Destription</li>
           <li className="cardinfo2">{clean}</li>
-          </div>
-          {console.log(book)}
-     
-     
+        </div>
+        {console.log(book)}
       </div>
-      
-     
-      <ReviewBook reviewBookId = {state}/>
-     <PostReview />
-     <FavoriteButton bookDetails={book} />
+
+      <div className="reviewbox">
+        <ReviewBook reviewBookId={state} />
+      </div>
+      <div className="postReviewBox">
+        <PostReview />
+      </div>
     </div>
   );
 };
