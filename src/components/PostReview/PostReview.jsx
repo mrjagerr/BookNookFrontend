@@ -12,8 +12,8 @@ const PostReview = () => {
 
   useEffect(() => [token]);
 
-  async function addNewReview(entry) {
-    const newReview = entry;
+  async function addNewReview() {
+    
     axios.post(
       "https://localhost:5001/api/reviews",
       {

@@ -43,7 +43,7 @@ const ReviewBook = () => {
         <label>Rating:</label>{reviewWithUser.averageRating}
       </div>
 
-      <FavoriteButton ReviewState={reviewWithUser} />
+      
       {reviews &&
         reviews.map((review) => {
           return (

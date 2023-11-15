@@ -15,7 +15,7 @@ const BooksInfoPage = () => {
   const clean = DOMPurify.sanitize(book.description, {
     FORBID_TAGS: ["p", "br", "b", "a","i"],
   });
-  console.log("state inside of InfoPage page : ", state);
+  console.log("state inside of recipe page : ", state);
   useEffect(() => {
     fetchbook();
   }, []);
@@ -46,15 +46,15 @@ const BooksInfoPage = () => {
           <li className="cardinfo1"> Destription</li>
           <li className="cardinfo2">{clean}</li>
           </div>
-          
+          {console.log(book)}
      
      
       </div>
       
      
       <ReviewBook reviewBookId = {state}/>
-     <PostReview bookId ={state}/>
-     
+     <PostReview />
+     <FavoriteButton bookDetails={book} />
     </div>
   );
 };

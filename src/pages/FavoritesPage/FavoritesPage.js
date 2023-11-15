@@ -12,11 +12,11 @@ const [favorites, setFavorites] = useState([]);
 
 
 useEffect(() => {
-  fetchCars();
+  fetchFavorites();
  
 }, [token]);
 
-const fetchCars = async () => {
+const fetchFavorites = async () => {
   try {
     let response = await axios.get("https://localhost:5001/api/favorites/myFavorites", {
       headers: {

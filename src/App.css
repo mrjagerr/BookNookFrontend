@@ -56,3 +56,18 @@ button:hover {
   padding: 3px 7px;
   font-size: 17px;
 }
+.favoritebutton {
+  background-color: transparent;
+  border: 2px solid steelblue;
+  color: steelblue;
+  font-size: 1rem;
+  font-family: inherit;
+ 
+  padding: 0.5rem 0.5rem;
+}
+
+.favoritebutton:hover {
+  cursor: pointer;
+  color: white;
+  background-color: steelblue;
+}

@@ -6,30 +6,30 @@ import BookMapper from "../../components/BookInfo/BookInfo";
 
 
 const BooksDetailsPage = () => {
-  const [users, setUsers] = useState([]);
+  const [volumes, setVolumes] = useState([]);
   const { state } = useLocation();
   console.log("state inside of bookdetails page : ", state);
   useEffect(() => {
-    fetchUsers();
+    fetchVolumes();
   }, []);
 
-  const fetchUsers = async () => {
+  const fetchVolumes = async () => {
     try {
       let response = await axios.get(
         `https://www.googleapis.com/books/v1/volumes?q=${state}`
       );
-      setUsers(response.data.items);
+      setVolumes(response.data.items);
      
     } catch (error) {
       console.log(error.message);
     }
   };
-  console.log(users);
+  console.log(volumes);
 
   return (
     <div>
       Search result
-     <BookMapper users={users}  />
+     <BookMapper users={volumes}  />
     
     </div>
   );
