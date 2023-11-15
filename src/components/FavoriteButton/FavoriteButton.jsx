@@ -6,18 +6,8 @@ import { useEffect, useState } from "react";
 const FavoriteButton = () => {
  
     
-    // const fetchFavorites = async () => {
-    //     try {
-    //       let response = await axios.get("https://localhost:5001/api/cars/myCars", {
-    //         headers: {
-    //           Authorization: "Bearer " + token,
-    //         },
-    //       });
-    //       setCars(response.data);
-    //     } catch (error) {
-    //       console.log(error.response.data);
-    //     }
-    //   };
+   // Toggles the passed button from OFF to ON and vice-versa.
+
 
 
     return ( <button>Favorite</button> );

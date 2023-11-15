@@ -6,6 +6,7 @@ import "./BooksInfoPage.css";
 import * as DOMPurify from "dompurify";
 import ReviewBook from "../../components/ReviewBook/ReviewBook";
 import FavoriteButton from "../../components/FavoriteButton/FavoriteButton";
+import PostReview from "../../components/PostReview/PostReview";
 
 const BooksInfoPage = () => {
   const [book, setBook] = useState([]);
@@ -14,7 +15,7 @@ const BooksInfoPage = () => {
   const clean = DOMPurify.sanitize(book.description, {
     FORBID_TAGS: ["p", "br", "b", "a","i"],
   });
-
+  console.log("state inside of InfoPage page : ", state);
   useEffect(() => {
     fetchbook();
   }, []);
@@ -52,7 +53,7 @@ const BooksInfoPage = () => {
       
      
       <ReviewBook reviewBookId = {state}/>
-     
+     <PostReview bookId ={state}/>
      
     </div>
   );
