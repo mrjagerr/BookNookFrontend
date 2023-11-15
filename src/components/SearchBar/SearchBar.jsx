@@ -18,7 +18,7 @@ const SearchBar = () => {
         id="search"
         className="searchBar"
       ></input>
-      <button type="submit" className="searchButton">{console.log(search)} search </button>
+      <button type="submit" className="searchButton"> search </button>
     </form>
   );
 };

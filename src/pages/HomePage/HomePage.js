@@ -30,7 +30,7 @@ const HomePage = () => {
 
   return (
     <div className="container">
-      {console.log(user)}
+     
       <h1>Home Page for {user.userName}!</h1>
       <div className="search">
         <SearchBar />

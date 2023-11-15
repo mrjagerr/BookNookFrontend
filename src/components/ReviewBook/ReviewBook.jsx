@@ -11,9 +11,8 @@ const ReviewBook = () => {
   const [reviewWithUser, setReviewWithUser] = useState([]);
   const { state } = useLocation();
   const [reviews, setReviews] = useState([]);
- 
 
-  console.log("state inside of ReviewBookComp page : ", state);
+
 
   useEffect(() => {
     fetchReviewWithUser();
@@ -28,27 +27,22 @@ const ReviewBook = () => {
             Authorization: "Bearer " + token,
           },
         }
-      ); 
-     
-      
-   
+      );
+
       setReviewWithUser(response.data);
-      
-      
+
       setReviews(response.data.reviews);
     } catch (error) {
       console.log(error.response.data);
     }
   };
- let avgRating = 0;
-  if(reviewWithUser.averageRating === undefined){
-    avgRating = 0
+  let avgRating = 0;
+  if (reviewWithUser.averageRating === undefined) {
+    avgRating = 0;
   }
-  if(reviewWithUser.averageRating !== undefined){
+  if (reviewWithUser.averageRating !== undefined) {
     avgRating = reviewWithUser.averageRating;
   }
-  console.log(reviewWithUser.averageRating)
-  console.log(avgRating)
  
   return (
     <div>
@@ -61,8 +55,8 @@ const ReviewBook = () => {
         reviews.map((review) => {
           return (
             <li key={review.id} className="reviewBoxRow1">
-              <li className="reviewBoxRow2">{review.user.userName}</li>
-              <li>{review.text}</li>
+              <p className="reviewBoxRow2">{review.user.userName}</p>
+              <p>{review.text}</p>
             </li>
           );
         })}

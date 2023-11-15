@@ -12,8 +12,7 @@ const FavoriteButton = ({bookDetails}) => {
     const [user, token] = useAuth();
     const [bookId, setBookId] = useState(state);
     
-    console.log("state inside of FavoriteButtonComponent : ", state);
-    console.log(bookDetails)
+    
 
 
     useEffect(() => [token]);
@@ -43,7 +42,7 @@ const FavoriteButton = ({bookDetails}) => {
       }
     return ( 
     <form onSubmit={handleSubmit}>
-      <input class="favoritebutton" type="submit" value="Add to favorites" />
+      <input className="favoritebutton" type="submit" value="Add to favorites" />
       </form> );
 }
  
